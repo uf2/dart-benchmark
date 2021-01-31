@@ -14,7 +14,7 @@ void main(List<String> arguments) async {
     someUsefulWork(i);
   }
   benchmarkTimer1.stop();
-  print('slow way took: ${benchmarkTimer1.elapsedMicroseconds}');
+  print('slow way took: ${benchmarkTimer1.elapsedMilliseconds} ms');
 
   print('Doing it the fast (multi-process) way...');
   var ret = CHILDREN;
@@ -28,9 +28,9 @@ void main(List<String> arguments) async {
       isolate.kill(priority: Isolate.immediate);
       if (ret == 0) {
         benchmarkTimer2.stop();
-        print('fast way took: ${benchmarkTimer2.elapsedMicroseconds}');
+        print('fast way took: ${benchmarkTimer2.elapsedMilliseconds} ms');
         print(
-            '${(benchmarkTimer1.elapsedMicroseconds / benchmarkTimer2.elapsedMicroseconds).toStringAsFixed(2)} faster');
+            '${(benchmarkTimer1.elapsedMilliseconds / benchmarkTimer2.elapsedMilliseconds).toStringAsFixed(2)} faster');
         exit(0);
       }
     });

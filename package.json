@@ -1,0 +1,24 @@
+{
+  "name": "dart-benchmark",
+  "version": "1.0.0",
+  "description": "A sample command-line application with an entrypoint in `bin/`, library code in `lib/`, and example unit test in `test/`.",
+  "main": "bin/worker_threads.js",
+  "bin": {
+    "dart-benchmark": "service.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uf2/dart-benchmark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uf2/dart-benchmark/issues"
+  },
+  "homepage": "https://github.com/uf2/dart-benchmark#readme",
+  "dependencies": {
+  }
+}

@@ -1,5 +1,16 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+dart bin/isolate_benchmark.dart
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Doing it the slow (single-process) way...
+slow way took: 2297 ms
+Doing it the fast (multi-process) way...
+fast way took: 963 ms
+2.39 faster
+
+node bin/worker.js
+
+Doing it the slow (single-process) way...
+slow way took: 1411 ms
+Doing it the fast (multi-process) way...
+fast way took: 467 ms
+3.02 faster
+
